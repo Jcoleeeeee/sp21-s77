@@ -49,8 +49,11 @@ public class TimeSLList {
             for (int j = 0; j < Ns.get(i); j++) {
                 List.addLast(j);
             }
+            int M = 10000;
             Stopwatch sw = new Stopwatch();
-            List.getLast();
+            for (int j = 0; j < M; j++) {
+                List.getLast();
+            }
             double timeInSecongds = sw.elapsedTime();
             Times.addLast(timeInSecongds);
 
