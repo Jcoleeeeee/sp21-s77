@@ -115,5 +115,25 @@ public class TestArrayDequeEC {
 
     }
 
+    @Test
+    public void bigDequeTest(){
+        System.out.println("Make sure to uncomment the lines below (and delete this print statement).");
+
+        StudentArrayDeque<Integer> lld1 = new StudentArrayDeque<>();
+        
+        for (int i = 0; i < 1000000; i++) {
+            lld1.addLast(i);
+        }
+
+        for (double i = 0; i < 500000; i++) {
+            assertEquals("Should have the same value", i, (double) lld1.removeFirst(), 0.0);
+        }
+
+        for (double i = 999999; i > 500000; i--) {
+            assertEquals("Should have the same value", i, (double) lld1.removeLast(), 0.0);
+        }
+
+    }
+
 }
 
